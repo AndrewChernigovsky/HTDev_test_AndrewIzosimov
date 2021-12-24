@@ -8,23 +8,37 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
-  <div class="main-menu container">
-    <div class="logo">
-      <a class="link logo__link" href="#no__scroll">
+  <div class="container">
+    <div class="main-menu wrapper">
+      <div class="logo">
+        <a class="link logo__link" href="#no__scroll">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="image/icons/logo.webp 1x, image/icons/logo@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="image/icons/logo.webp 1x">
+            <img class="logo__image" src="image/icons/logo.png" alt="Logo">
+          </picture>
+        </a>
+      </div>
+      <a class="link link-web" href="#no__scroll">
         <picture>
-          <source type="image/webp" media="(min-width: 1024px)" srcset="image/icons/logo.webp 1x, image/icons/logo@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 320px)" srcset="image/icons/logo.webp 1x">
-          <img class="logo__image" src="image/icons/logo.png" alt="Logo">
+          <source type="image/webp" media="(min-width: 1024px)" srcset="image/icons/link.webp 1x, image/icons/link@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 320px)" srcset="image/icons/link.webp 1x">
+          <img class="link-web__image" src="image/icons/link.png" alt="Link Web" width="20" height="20">
         </picture>
       </a>
     </div>
-    <a class="link link-web" href="#no__scroll">
-      <picture>
-        <source type="image/webp" media="(min-width: 1024px)" srcset="image/icons/link.webp 1x, image/icons/link@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 320px)" srcset="image/icons/link.webp 1x">
-        <img class="link-web__image" src="image/icons/link.png" alt="Link Web" width="20" height="20">
-      </picture>
-    </a>
+    <header class="main-header">
+      <div class="main-bg">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/main-bg.webp 1x, image/content/main-bg@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 320px)" srcset="image/content/main-bg.webp 1x">
+          <img class="main-bg__image" src="image/content/main-bg.jpg" alt="main-bg">
+        </picture>
+      </div>
+      <div class="about-company">
+
+      </div>
+    </header>
   </div>
 </body>
 </html>
