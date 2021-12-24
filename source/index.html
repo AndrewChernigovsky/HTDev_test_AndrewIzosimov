@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Intecko</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<body class="page__body">
+  <div class="container">
+    <div class="logo">
+      <a class="link logo__link" href="#no__scroll">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/grecia.webp 1x, image/content/grecia@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="image/content/grecia-tb.webp 1x, image/content/grecia-tb@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 320px)" srcset="image/content/grecia-mb.webp 1x">
+          <img class="logo__image" src="image/icons/logo.png" alt="Logo" loading="lazy">
+        </picture>
+      </a>
+    </div>
+    <a class="link link-web" href="#no__scroll">
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/grecia.webp 1x, image/content/grecia@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="image/content/grecia-tb.webp 1x, image/content/grecia-tb@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 320px)" srcset="image/content/grecia-mb.webp 1x">
+        <img class="link-web__image" src="image/icons/link.png" alt="Link Web" loading="lazy">
+      </picture>
+    </a>
+    </div>
+  </div>
 </body>
 </html>
