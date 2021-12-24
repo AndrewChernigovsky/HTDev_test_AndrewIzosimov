@@ -1,0 +1,55 @@
+.logo{
+  display: none;
+
+  &__wrapper {
+
+  }
+
+  &__img {
+    picture {
+      flex: none;
+
+      img {
+        flex: none;
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+        display: inline-block;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $mdlg) {
+    display: block;
+  }
+}
+
+.logo-m {
+  display: none;
+  order: 1;
+  &__wrapper {
+
+  }
+
+  &__img {
+    picture {
+      flex: none;
+
+      img {
+        flex: none;
+        width: 3rem;
+        height: 3rem;
+        object-fit: contain;
+        display: inline-block;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

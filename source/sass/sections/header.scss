@@ -1,0 +1,124 @@
+.main-header {
+  min-height: 32rem;
+  background-color: $black;
+  background-image: url('../image/content/main-bg-vsm.jpg');
+  object-fit: contain;
+  min-width: min-content;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  @media screen and (min-width: $lg) {
+    background-image: url('../image/content/main-bg-sm.jpg');
+  }
+
+  @media screen and (min-width: $tb) {
+    min-height: 55rem;
+  }
+
+  @media screen and (min-width: $mdlg) {
+    background-image: url('../image/content/main-bg.jpg');
+    background-color: $main;
+    background-position: right top;
+    min-height: inherit;
+  }
+
+  @media screen and (min-width: $hd) {
+    background-image: url('../image/content/main-bg.jpg');
+    background-size: contain;
+    min-height: inherit;
+  }
+
+  &__date {
+    margin-top: 17rem;
+    margin-left: 2rem;
+
+    @media screen and (min-width: $lg) {
+      margin-top: 10rem;
+    }
+
+    @media screen and (min-width: $tb) {
+      margin-top: 20rem;
+    }
+
+    @media screen and (min-width: $hd) {
+      margin-left: 20rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.time-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 23rem;
+
+  @media screen and (min-width: $lg) {
+    width: 35rem;
+  }
+
+
+  @media screen and (min-width: $mdlg) {
+    min-width: 50rem;
+  }
+
+  &__wrapper {
+    background-color: $main;
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+
+    @media screen and (min-width: $lg) {
+      width: 8rem;
+      height: 8rem;
+    }
+
+
+    @media screen and (min-width: $mdlg) {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    .number {
+      margin-bottom: -1.5rem;
+      margin-top: 0.5rem;
+
+      @media screen and (min-width: $lg) {
+        margin-bottom: -2rem;
+        margin-top: 1rem;
+      }
+
+      @media screen and (min-width: $mdlg) {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+#sign {
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 0.4rem;
+  left: 2.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media screen and (min-width: $tb) {
+    display: block;
+  }
+}

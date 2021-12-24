@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Arial';
+  src: url('../fonts/ArialBold.woff') format('woff'),
+       url('../fonts/ArialBold.woff2') format('woff2'),
+       url('../fonts/ArialBold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../fonts/ArialRegular.woff') format('woff'),
+       url('../fonts/ArialRegular.woff2') format('woff2'),
+       url('../fonts/ArialRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+
