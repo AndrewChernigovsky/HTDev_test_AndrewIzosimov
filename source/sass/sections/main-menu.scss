@@ -1,0 +1,11 @@
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+
+  @media (min-width: $lg) {
+    padding: 0 60px;
+    padding-top: 70px;
+  }
+}

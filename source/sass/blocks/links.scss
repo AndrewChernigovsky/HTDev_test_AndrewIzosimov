@@ -1,0 +1,11 @@
+.link-web {
+  &__image{
+    width: 20px;
+    height: 20px;
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
+    }
+  }
+}
