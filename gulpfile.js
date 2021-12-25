@@ -1,5 +1,4 @@
 "use strict";
-
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -15,6 +14,7 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var uglify = require("gulp-uglify");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -39,6 +39,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/js/**/*.js", gulp.series("jsCopy", "refresh"));
   gulp.watch("source/image/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
@@ -69,7 +70,7 @@ gulp.task("webp", function () {
 gulp.task("sprite", function () {
   return gulp.src("source/image/*.svg")
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename("sprite_auto.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/image"));
 });
 
@@ -85,7 +86,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/image/**",
-    "source/js/**",
     "source//*.ico"
     ], {
       base: "source"
@@ -93,9 +93,15 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task("jsCopy", function () {
+  return gulp.src("source/js/**/*.js")
+  .pipe(gulp.dest("build/js/"))
+  .pipe(server.stream());
+});
+
 gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "jsCopy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
