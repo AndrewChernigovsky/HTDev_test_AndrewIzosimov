@@ -1,13 +1,30 @@
 .main-header {
   min-height: max-content;
-  background-color: $bg;
-  min-width: 100%;
+  min-width: 300px;
+
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 0;
 }
 
 .main-bg {
-  max-width: 100%;
+  overflow: hidden;
+  min-width: calc(100% - 20px);
+  min-height: inherit;
+  max-width: min-content;
+
+  picture {
+    min-height: inherit;
+  }
 
   &__image {
-    max-width: 99%;
+    max-width: 100%;
+    min-height: inherit;
+    object-fit: cover;
+  }
+
+  @media (min-width: $lg) {
+    min-width: calc(100% - 331px);
   }
 }

@@ -1,0 +1,43 @@
+.slider-projects {
+  max-width: max-content;
+
+  &__wrapper {
+    min-width: 280px;
+    min-height: 168px;
+    position: relative;
+  }
+
+  &__content-wrapper {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+  }
+
+  &__pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-width: 5%;
+  }
+
+  &__step {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $primary1;
+
+    &--active {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

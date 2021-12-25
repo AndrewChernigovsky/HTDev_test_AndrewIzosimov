@@ -4,21 +4,21 @@
 }
 
 .container {
-  min-width: 270px;
+  min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
   @media (min-width: $sm) {
-    max-width: 610px;
+    max-width: 630px;
   }
 
   @media (min-width: $md) {
-    max-width: 930px;
+    max-width: 960px;
   }
 
   @media (min-width: $lg) {
-    max-width: 1250px;
+    max-width: 1280px;
   }
 }
 
@@ -36,4 +36,9 @@
   @media (min-width: $lg) {
     padding: 0 45px;
   }
+}
+
+.main {
+  background-color: $bg;
+  min-height: 100%;
 }

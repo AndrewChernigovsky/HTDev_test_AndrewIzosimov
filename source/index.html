@@ -9,7 +9,7 @@
 </head>
 <body class="page__body">
   <div class="container">
-    <div class="main-menu wrapper">
+    <div class="main-menu main-menu__wrapper">
       <div class="logo">
         <a class="link logo__link" href="#no__scroll">
           <picture>
@@ -27,6 +27,8 @@
         </picture>
       </a>
     </div>
+  </div>
+  <main class="main">
     <header class="main-header">
       <div class="main-bg">
         <picture>
@@ -35,10 +37,64 @@
           <img class="main-bg__image" src="image/content/main-bg.jpg" alt="main-bg">
         </picture>
       </div>
-      <div class="about-company">
+    </header>
+
+    <section class="about-company">
+      <h2 class="f-standart f-basicTitle">Кто мы</h2>
+      <p class="f-standart f-basicText">
+        «ИНТЕКО» – прогрессивный девелопер с государственным участием.
+      </p>
+
+      <p class="f-standart f-basicText">
+        Компания активно участвует в развитии городов: возводит современные жилые комплексы и социально значимые объекты, создает комфортные общественные пространства, формируя новые точки притяжения и современную среду для комфортной жизни.
+      </p>
+      <p class="f-standart f-basicText">
+        Компания включена в перечень системообразующих организаций строительной отрасли. Президент компании – Александр Николаев является членом Общественного совета при Минстрое РФ.
+      </p>
+    </section>
+    <section class="our-projects">
+      <h2 class="f-standart f-basicTitle">Наши проекты</h2>
+      <p class="f-standart f-basicText">
+        За 19 лет на рынке недвижимости компания реализовала более 80 проектов в Москве, Ростове-на-Дону, Санкт-Петербурге и Ленинградской области и построила более 5 млн кв. м.
+      </p>
+
+      <div class="slider-projects" id="sliderProjects">
+        <div class="slider-projects__wrapper">
+          <div class="slider-projects__content-wrapper slider-projects__content-wrapper--active">
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/slider1/slider01.webp 1x, image/content/slider1/slider01@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="image/content/slider1/slider01.webp 1x">
+              <img class="main-bg__image" src="image/content/slider1/slider01.jpg" alt="slider01">
+            </picture>
+
+          </div>
+          <div class="slider-projects__content-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/slider1/slider02.webp 1x, image/content/slider1/slider02@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="image/content/slider1/slider02.webp 1x">
+              <img class="main-bg__image" src="image/content/slider1/slider02.jpg" alt="slider02">
+            </picture>
+          </div>
+          <div class="slider-projects__content-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/slider1/slider03.webp 1x, image/content/slider1/slider03@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 320px)" srcset="image/content/slider1/slider03.webp 1x">
+              <img class="main-bg__image" src="image/content/slider1/slider03.jpg" alt="slider03">
+            </picture>
+          </div>
+          <div class="slider-projects__pagination">
+            <div class="slider-projects__pagination-wrapper">
+              <div class="slider-projects__step slider-projects__step--active"></div>
+              <div class="slider-projects__step"></div>
+              <div class="slider-projects__step"></div>
+            </div>
+          </div>
+        </div>
 
       </div>
-    </header>
-  </div>
+    </section>
+  </main>
+  <script src="js/script.min.js" type="module"></script>
 </body>
 </html>
